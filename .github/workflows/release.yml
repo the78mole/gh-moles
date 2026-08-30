@@ -55,7 +55,7 @@ jobs:
 
       - name: Create Release
         if: ${{ steps.semver.outputs.changed == 'true' && !env.ACT }}
-        uses: softprops/action-gh-release@v2.4.2
+        uses: softprops/action-gh-release@v3.0.3
         with:
           tag_name: v${{ steps.semver.outputs.version }}
           name: Release v${{ steps.semver.outputs.version }}
